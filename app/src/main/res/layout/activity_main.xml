@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/top_frame">
+        
+        <com.fenchtose.nocropper.CropperView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ff282828"
+            app:grid_color="@color/purple_500"
+            app:padding_color="@color/purple_500"
+            app:grid_opacity="0.8"
+            app:grid_thickness="0.8dp"></com.fenchtose.nocropper.CropperView>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:id="@+id/snap_button"
+            android:layout_gravity="left|bottom"
+            android:background="@drawable/black_tranp_circle_ripple"
+            android:src="@drawable/ic_baseline_crop_free_24"></ImageView>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:id="@+id/rotate_button"
+            android:layout_gravity="right|bottom"
+            android:background="@drawable/black_tranp_circle_ripple"
+            android:src="@drawable/ic_baseline_rotate_right_24"></ImageView>
+
+
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true">
+        
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Crop"
+            android:id="@+id/btnCrop"></Button>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Toogle Gesture"
+            android:id="@+id/btnToogleGesture"></Button>
+        
+    </LinearLayout>
+
+</RelativeLayout>
